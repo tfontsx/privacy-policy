@@ -36,6 +36,12 @@
       color: #111111;
     }
 
+    h3 {
+      margin-top: 20px;
+      font-size: 17px;
+      color: #111111;
+    }
+
     p {
       font-size: 16px;
     }
@@ -78,7 +84,7 @@
     <h1>Privacy Policy</h1>
 
     <p class="meta">
-      <strong>Last Updated:</strong> 11/05/2026 <br />
+      <strong>Last Updated:</strong> 31/07/2026 <br />
       <strong>Business Name:</strong> Adelaide Commercial Painters<br />
       <strong>Contact Email:</strong> info@adelaidecommercialpainters.com.au
     </p>
@@ -87,7 +93,8 @@
     <p>
       This Privacy Policy explains how Adelaide Commercial Painters ("we", "our", or "us")
       collects, uses, stores, and protects your information when you use our mobile
-      application (the "App").
+      application (the "App"), including the customer booking experience, the Admin
+      Portal, and the Staff Portal used by contractors and employees.
     </p>
     <p>
       By using the App, you agree to the collection and use of information in accordance
@@ -96,8 +103,9 @@
 
     <h2>2. Information We Collect</h2>
     <p>
-      We collect only the information necessary to provide our painting business services
-      and manage related bookings, communications, and service forms.
+      We collect only the information necessary to provide our painting business services,
+      manage related bookings and communications, administer staff and contractor accounts,
+      record work performed, and generate invoices and service records.
     </p>
 
     <h3>Customer Information</h3>
@@ -119,6 +127,40 @@
       <li>Device token for push notifications</li>
     </ul>
 
+    <h3>Contractor Information</h3>
+    <p>
+      Contractors are independent workers who create an account in the Staff Portal to
+      manage their shifts, submit compliance forms, and generate tax invoices. We collect:
+    </p>
+    <ul>
+      <li>Email address and password, securely managed through our authentication provider</li>
+      <li>First name and last name</li>
+      <li>Mobile number</li>
+      <li>Residential address</li>
+      <li>Trade / profession</li>
+      <li>Australian Business Number (ABN)</li>
+      <li>Bank details (institution name, BSB, account number) for the purpose of populating
+        the contractor's own tax invoices — we do not process payments or transfer funds
+        through the App</li>
+      <li>Hourly pay rate, set by an administrator</li>
+      <li>Clock in / clock out times, job description, and job site location for each shift</li>
+      <li>Location data captured at clock in and clock out (see "Location Data" below)</li>
+      <li>Site induction and daily compliance checklist responses, where applicable</li>
+    </ul>
+
+    <h3>Staff (Employee) Information</h3>
+    <p>
+      Employees use a separate, lighter-weight Staff Portal signup that does not collect
+      banking, ABN, or trade information. We collect:
+    </p>
+    <ul>
+      <li>Email address and password, securely managed through our authentication provider</li>
+      <li>First name and last name</li>
+      <li>Mobile number</li>
+      <li>Residential address</li>
+      <li>Site induction and daily compliance checklist responses</li>
+    </ul>
+
     <h2>3. How We Use Your Information</h2>
     <p>
       We use the information collected through the App for the following purposes:
@@ -127,7 +169,11 @@
       <li>Managing and scheduling painting service bookings</li>
       <li>Communicating with customers about appointments or service requests</li>
       <li>Recording service completion details and customer acknowledgements</li>
-      <li>Managing internal business administration</li>
+      <li>Managing contractor and staff accounts, shifts, and attendance records</li>
+      <li>Verifying that a clock in or clock out occurred at the expected job site</li>
+      <li>Generating and emailing weekly tax invoices from contractors to Adelaide Commercial Painters</li>
+      <li>Recording site inductions and daily compliance checklists</li>
+      <li>Managing internal business administration and payroll-related recordkeeping</li>
       <li>Maintaining business and service records</li>
       <li>Sending push notifications related to bookings and messages</li>
       <li>Improving the reliability and functionality of the App</li>
@@ -136,7 +182,31 @@
       We do not use your personal information for advertising or third-party marketing.
     </p>
 
-    <h2>4. Push Notifications</h2>
+    <h2>4. Location Data</h2>
+    <p>
+      When a contractor clocks in or clocks out of a shift, the App requests the device's
+      GPS location. This is used to record, alongside the shift, a general indication of
+      where a clock in or clock out took place — helping verify attendance at the correct
+      job site.
+    </p>
+    <ul>
+      <li>Location is only captured at the moment of clocking in or clocking out — the App
+        does not track or monitor your location at any other time, and does not track
+        location in the background.</li>
+      <li>The precise coordinates are converted to a general suburb-level description for
+        display; the underlying coordinates are stored with the shift record for
+        verification purposes.</li>
+      <li>If location access is denied or unavailable, the contractor can enter a short
+        reason instead, and the shift is still recorded without a location.</li>
+      <li>Location data tied to a shift is visible to administrators as part of that shift's
+        record, and is retained for the same period as the shift record itself (see "Data
+        Retention" below).</li>
+      <li>Location permissions can be managed or revoked at any time through your device
+        settings. Declining location access does not prevent you from using the App to
+        clock in or out.</li>
+    </ul>
+
+    <h2>5. Push Notifications</h2>
     <p>
       We use push notifications to keep you informed about your bookings and messages.
       Notifications may include:
@@ -157,24 +227,27 @@
       your bookings.
     </p>
 
-    <h2>5. Data Storage and Security</h2>
+    <h2>6. Data Storage and Security</h2>
     <p>
       Your information is stored and processed using trusted third-party backend services,
       including Supabase, which provides database, authentication, and backend
       infrastructure for the App. Push notifications are delivered via Google Firebase
-      Cloud Messaging (FCM).
+      Cloud Messaging (FCM). Contractor tax invoices are emailed via Resend.
     </p>
     <p>
       We take reasonable technical and organisational steps to protect your information,
-      including secure authentication, encrypted data transmission, and restricted access
-      to authorised personnel only.
+      including secure authentication, encrypted data transmission, row-level access
+      controls restricting each contractor or employee to their own records, and restricted
+      administrative access to authorised personnel only.
     </p>
     <p>
-      Admin passwords are managed securely through Supabase authentication and are not
-      stored in plain text by us.
+      Passwords for admin, contractor, and staff accounts are managed securely through our
+      authentication provider and are not stored in plain text by us. Bank and ABN details
+      supplied by contractors are stored only to populate that contractor's own invoices and
+      are never shared with other contractors or displayed to customers.
     </p>
 
-    <h2>6. Data Sharing and Disclosure</h2>
+    <h2>7. Data Sharing and Disclosure</h2>
     <p>
       We do not sell, rent, or trade your personal information.
     </p>
@@ -182,70 +255,88 @@
       We may share information only in the following limited circumstances:
     </p>
     <ul>
-      <li>With service providers required to operate the App, such as Supabase and Google Firebase</li>
+      <li>With service providers required to operate the App, such as Supabase, Google
+        Firebase, and Resend</li>
       <li>With authorised business personnel for service and administration purposes</li>
+      <li>A contractor's weekly tax invoice, containing their own submitted business and
+        banking details plus their shift data for that period, is emailed to Adelaide
+        Commercial Painters for payment processing</li>
       <li>If required by law, regulation, legal process, or government request</li>
     </ul>
 
-    <h2>7. Data Retention</h2>
+    <h2>8. Data Retention</h2>
     <p>
       We retain your information only for as long as necessary to provide our services,
       maintain business records, comply with legal obligations, resolve disputes, or
       enforce agreements.
     </p>
     <p>
-      When information is no longer required, we will take reasonable steps to delete or
-      anonymise it.
+      Contractors and employees can request deletion of their account at any time. When an
+      account is deleted, the associated profile (personal details, bank details, ABN, and
+      login) is permanently removed. However, shift records, location data tied to those
+      shifts, site induction and compliance checklist submissions, and invoice records are
+      retained for legal and payroll recordkeeping purposes, as businesses in Australia are
+      generally required to keep employment and financial records for a minimum period. In
+      this case, the associated name and email are kept alongside those records so they
+      remain identifiable for record-keeping purposes, even though the account itself and
+      its personal profile no longer exist.
+    </p>
+    <p>
+      When information is no longer required to be retained, we will take reasonable steps
+      to delete or anonymise it.
     </p>
 
-    <h2>8. Your Rights</h2>
+    <h2>9. Your Rights</h2>
     <p>
       Depending on your location, you may have the right to:
     </p>
     <ul>
       <li>Request access to the personal information we hold about you</li>
       <li>Request correction of inaccurate or incomplete information</li>
-      <li>Request deletion of your personal information</li>
+      <li>Request deletion of your personal information (contractors and staff can also
+        delete their own account and profile directly within the App)</li>
       <li>Opt out of push notifications through your device settings</li>
+      <li>Manage or revoke location permissions through your device settings</li>
       <li>Ask questions about how your information is used</li>
     </ul>
     <p>
       To make a request, please contact us using the contact details listed below.
     </p>
 
-    <h2>9. Third-Party Services</h2>
+    <h2>10. Third-Party Services</h2>
     <p>
       The App uses the following third-party services:
     </p>
     <ul>
       <li><strong>Supabase</strong> — database storage and authentication</li>
       <li><strong>Google Firebase Cloud Messaging (FCM)</strong> — push notification delivery</li>
+      <li><strong>Resend</strong> — delivery of contractor tax invoice emails</li>
     </ul>
     <p>
       These services may process data in accordance with their own privacy practices and policies.
     </p>
 
-    <h2>10. Children's Privacy</h2>
+    <h2>11. Children's Privacy</h2>
     <p>
       The App is not intended for use by children under the age of 13, or the minimum
       legal age required in your jurisdiction. We do not knowingly collect personal
       information from children.
     </p>
 
-    <h2>11. International Data Processing</h2>
+    <h2>12. International Data Processing</h2>
     <p>
       Your information may be processed or stored on servers located outside your country
       of residence. Where this occurs, we take reasonable steps to ensure your information
       remains protected in accordance with this Privacy Policy.
     </p>
 
-    <h2>12. Changes to This Privacy Policy</h2>
+    <h2>13. Changes to This Privacy Policy</h2>
     <p>
       We may update this Privacy Policy from time to time. Any changes will be posted on
       this page with an updated "Last Updated" date.
     </p>
 
-    <h2>13. Contact Us</h2>
+    <h2>14. Contact Us</h2>
     <p>
       If you have any questions, concerns, or requests regarding this Privacy Policy,
       please contact us:
